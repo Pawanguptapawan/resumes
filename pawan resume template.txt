@@ -1,0 +1,881 @@
+%-------------------------
+% Resume in Latex
+% Author
+% License : MIT
+%------------------------
+
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \text{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+\newcommand{\name}{Pawan Gupta} % Your Name
+\newcommand{\course}{Bachelor of Technology} % Your Program
+\newcommand{\roll}{20223171} % Your Roll No.
+\newcommand{\phone}{7737224653} % Your Phone Number
+\newcommand{\emaila}{pawanguptapawan740@gmail.com} %Email 1
+\newcommand{\emailb}{pawan.20223171@mnnit.ac.in} %Email 2
+
+
+
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+% %----------HEADING-----------------
+
+
+% \parbox{2.35cm}{%
+% \includegraphics[width=2cm,clip]{MNNIT logo.jpg}
+% }
+% \parbox{\dimexpr\linewidth-2.8cm\relax}{
+% \begin{tabularx}{\linewidth}{L r} \\
+%   \textbf{\Large \name} & {\raisebox{0.0\height}{\footnotesize \faPhone}\ +91-\phone}\\
+%   {Roll No.: \roll} & \href{mailto:\emaila}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emaila}} \\
+%   \course &  \href{mailto:\emailb}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emailb}}\\
+%   {Computer Science And Engineering} &  \href{https://github.com/Pawanguptapawan}{\raisebox{0.0\height}{\footnotesize \faGithub}\ {GitHub Profile}} \\
+%   {Motilal Nehru National Institute of Technology Allahabad, Prayagraj} & \href{https://www.linkedin.com/in/pawan-gupta-pawan-b03058263/}{\raisebox{0.0\height}{\footnotesize \faLinkedin}\ {LinkedIn Profile}}
+%   & \href{https://leetcode.com/u/Rajasthan_local6377/}{\raisebox{0.0\height}{\footnotesize \faCode}\ {LeetCode Profile}}
+% \end{tabularx}
+% }
+%----------HEADING-----------------
+\parbox{2.35cm}{%
+\includegraphics[width=2cm,clip]{MNNIT logo.jpg}
+}
+\parbox{\dimexpr\linewidth-2.8cm\relax}{
+\begin{tabularx}{\linewidth}{L r} \\
+  \textbf{\Large \name} & {\raisebox{0.0\height}{\footnotesize \faPhone}\ +91-\phone}\\
+  {Roll No.: \roll} & \href{mailto:\emaila}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emaila}} \\
+  \course &  \href{mailto:\emailb}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emailb}}\\
+  {Computer Science And Engineering} &  \href{https://github.com/Pawanguptapawan}{\raisebox{0.0\height}{\footnotesize \faGithub}\ {GitHub Profile}} \\
+  {Motilal Nehru National Institute of Technology , Prayagraj} & \href{https://www.linkedin.com/in/pawan-gupta-pawan-b03058263/}{\raisebox{0.0\height}{\footnotesize \faLinkedin}\ {LinkedIn Profile}} \\
+  & \href{https://leetcode.com/u/Rajasthan_local6377/}{\raisebox{0.0\height}{\footnotesize \faCode}\ {LeetCode Profile}}
+\end{tabularx}
+}
+% \parbox{3.0cm}{%
+% \flushright \includegraphics[width=2cm,clip]{nitp_logo.png}
+% }
+
+
+
+
+%-----------EDUCATION-----------
+\section{\textbf{Education}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Motilal Nehru National Institute Of Technology Allahabad , Prayagraj}{CGPA: 7.94}
+      {Pursuing Honors in Computer Science and Engineering}{Graduation Year: 2026}
+      \vspace{0.3mm}
+    \resumeSubheading
+      {Swami Teonram Alok Public School, Kota}{Percentage: 96.7}
+      {Rajasthan Board of Secondary Education, Rajasthan(12th)}{2021}
+       \vspace{0.3mm}
+    \resumeSubheading
+    {Swami Vivekanand Children Public School , Jhalawar}{Percentage:93.33 }
+      {Rajasthan Board of Secondary Education, Rajasthan(10th)}{2019}
+      
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+%
+
+
+
+% %-----------EXPERIENCE-----------------
+% \section{\textbf{Experience}}
+%   \resumeSubHeadingListStart
+%     \resumeSubheading
+%       {Company Name}{City}
+%       {Your Role}{Event dates}
+%       \vspace{-2.0mm}
+%       \resumeItemListStart
+%     \item {Work description line 1}
+%     \item {Work description line 2}
+%     \resumeItemListEnd
+    
+%     \vspace{-3.0mm}
+    
+%     \resumeSubheading
+%       {Company Name}{City}
+%       {Your Role}{Event dates}
+%       \vspace{-2.0mm}
+%       \resumeItemListStart
+%     \item {Work description line 1}
+%     \item {Work description line 2}
+%     \resumeItemListEnd
+      
+%   \resumeSubHeadingListEnd
+% \vspace{-8.5mm}
+
+
+
+%-----------PROJECTS-----------------
+\section{\textbf{Personal Projects}}
+\resumeSubHeadingListStart
+
+%     \resumeProject
+%       {CryptoChat} %Project Name
+%       {Dr. Vishal} %Project Name, Location Name
+%       {} %Event Dates
+      
+%        {Develop web application based on block-chain cryptocurrency network with honset miners,}
+%        \vspace{1.6mm}
+%       {Simulate message latency, Proof of work , transaction generation and verification and block -chain forks.}
+%       {Incorporate node hyperparameters in the network evaluating the results of selfish and stubborn mining attacks.}
+%       {}
+      
+
+%       \resumeItemListStart
+%         \item {Tools \& technologies used: VS code, github , block-chain cryptocurrency , Reactjs , Taliwind CSS.}
+%         \item {1. MetaMask Authentication
+% 2. Create an Account In the Decentralized chat app
+% 3. Add friends to chat 
+% 4. Send and receive messages on the blockchain chat app
+% 5. Solidity smart contract for blockchain chat app
+% 6. Ui/Ux design our decentralized chat application
+% 7. Using web3model and web3 js and etherjs for connecting with the Ethereum blockchain.}
+%     \resumeItemListEnd
+\resumeProject
+  {CryptoChat} % Project Name
+   % Location Name
+   {}
+   % Event Dates
+  
+{Developed a decentralized web application based on blockchain cryptocurrency networks with honest miners},\vspace{2mm}{ simulating message latency, proof of work, transaction generation and verification, and blockchain forks. Incorporated node hyperparameters to evaluate the results of selfish and stubborn mining attacks.}
+{}
+\vspace{-2.5mm}
+  \resumeItemListStart
+    \item {Technologies & Tools: VS Code, GitHub, Blockchain (Cryptocurrency Network), React.js, Tailwind CSS, Web3.js, Ethers.js, Solidity, MetaMask.}
+    \item {Key Features:}
+    \begin{itemize}
+      \item {MetaMask integration for authentication and wallet management.}
+      \item {User account creation in a decentralized chat application.}
+      \item {Add friends, send, and receive messages on a blockchain-based chat platform.}
+      \item {Implemented Solidity smart contracts to manage messages and transactions on the blockchain.}
+      \item {Designed a user-friendly UI/UX for the decentralized chat application.}
+      \item {Utilized Web3.js, Ethers.js, and Web3Model for Ethereum blockchain connectivity and interactions.}
+    \end{itemize}
+  \resumeItemListEnd
+
+    \vspace{-2mm}
+    
+%     \resumeProject
+%       {YoomXApp} %Project Name
+%       {} %Project Name, Location Name
+%       {} %Event Dates
+      
+%     {Develop web application based on Nextjs. Simulate Online meetings and Video calls , verification , security.}
+%     {}
+%       \resumeItemListStart
+%         \item {Tools \& technologies used: Nextjs (version 14), Clerk for authentication , Tailwind CSS , Github , Vercel for deployment , Stream for video and audio experiences.}
+%         \item {A React.js-based clone of Zoom, designed to enable users to authenticate via Google, GitHub, LinkedIn, or Gmail. Users can create, join, and schedule meetings, as well as access recordings of previous sessions.}
+        
+%         {Features:
+% Authentication through Google, GitHub, LinkedIn, or Gmail.
+% Real-time meeting creation, joining, and scheduling functionalities.
+% Access to past meeting recordings.}
+%     \resumeItemListEnd
+\resumeProject
+  {YoomXApp}
+  {}
+  {}% Project Name
+ {Developed a web application using Next.js (v14), simulating online meetings and video calls with}
+\vspace{2mm}
+{features like authentication, verification, and security.}
+\vspace{-2mm}
+  \resumeItemListStart
+    \item {Technologies & Tools: Next.js (v14), Clerk for authentication, Tailwind CSS, GitHub for version control, Vercel for deployment, Stream for video/audio communication.}
+    \item {Built a React.js-based Zoom clone that integrates with Google, GitHub, LinkedIn, and Gmail for authentication, enabling users to create, join, and schedule meetings, as well as access and view past meeting recordings.}
+    \item {Implemented core features including:}
+    \begin{itemize}
+      \item {OAuth-based authentication through Google, GitHub, LinkedIn, or Gmail for user verification.}
+      \item {Real-time meeting creation, instant joining, and scheduling with unique meeting links and invite management.}
+      \item {Support for video/audio conferencing with Stream integration for seamless communication.}
+      \item {Recording feature to enable users to view and download past meetings.}
+      \href{https://yoom-app-wsyw-5ut1sjoyf-pawanguptapawans-projects.vercel.app/sign-in}{\raisebox{0.0\height}{\footnotesize \faCode}\ \textbf{App-Link}}
+    \end{itemize}
+  \resumeItemListEnd
+
+    \vspace{-2mm}
+    
+      
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+
+
+
+%-----------Technical skills-----------------
+\section{\textbf{Technical Skills and Interests}}
+ \begin{itemize}[leftmargin=0.05in, label={}]
+    \small{\item{
+     \vspace{0.6mm}
+     \textbf{Languages}{: C , C++, Java, Python, JavaScript,TypeScript} \\
+      \vspace{0.6mm}
+     \textbf{Developer Tools}{: Visual Studio Code, Git , Github , Sublime Text , Anaconda3  } \\
+     \vspace{0.6mm}
+     \textbf{Cloud/Databases}{: SQL , NoSQL ,MongoDB} \\
+      \vspace{0.6mm}
+     \textbf{Soft Skills}{: Adaptability , Verbal Communication , Listening , Leadership} \\
+      \vspace{0.6mm}
+     \textbf{Development}{: HTML5 , CSS ,Bootstrap  , Expressjs , mongoDB , Matplotlib , pandas , numpy ,seaborn } \\
+      \vspace{0.6mm}
+     \textbf{Areas of Interest}{: Data Science , Artificial Intelligence, Machine Learning } \\
+    }}
+ \end{itemize}
+ \vspace{-16pt}
+
+
+
+% %-----------Positions of Responsibility-----------------
+% \section{\textbf{Positions of Responsibility}}
+% \vspace{-0.4mm}
+% \resumeSubHeadingListStart
+% \resumePOR{Responsible for curating and distributing technical resources and materials to junior members. } % Position
+%     {} %Club,Event
+%     {} %Tenure Period
+% \resumePOR{Managing and scheduling development-focused training sessions and workshops.} % Position
+%     {(Computer Science Club)} %Club,Event
+%     {} %Tenure Period
+% \resumePOR{ Accountable for overseeing and maintaining the provision of technical infrastructure and facilities to } % Position
+% {}
+% {}
+% {{ Support the club’s activities}.}
+%  % Position
+%     {(Green Club)} %Club,Event
+%       {}
+% \resumeSubHeadingListEnd
+% \vspace{-5mm}
+
+
+
+
+%-----------Achievements-----------------
+\section{\textbf{Achievements}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+\resumePOR{Achieved 99.53 percentile in JEE Main with All India Rank (AIR) 4278.}
+{}
+{}% Award
+
+\resumePOR{Secured All India Rank (AIR) 1511 (CRL) in JEE Advanced.} 
+{}
+{}
+% Award
+
+\resumePOR{Ranked in the top 10\% on Leetcode, with highest ranks of 1113 and 1146.}
+{}
+{}% 
+\resumePOR{Selected for the interview round at Accenture for technical roles.} 
+{}
+{}% Award
+
+\resumePOR{Successfully solved over 500 algorithmic problems on Leetcode and Codeforces.} % Award
+{}
+{}
+
+\resumeSubHeadingListEnd
+\vspace{-5mm}
+
+
+
+
+%-------------------------------------------
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%-------------------------
+% Resume in Latex
+% Author
+% License : MIT
+%------------------------
+
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+\newcommand{\name}{Pawan Gupta} % Your Name
+\newcommand{\course}{Bachelor of Technology} % Your Program
+\newcommand{\roll}{20223171} % Your Roll No.
+\newcommand{\phone}{7737224653} % Your Phone Number
+\newcommand{\emaila}{pawanguptapawan740@gmail.com} %Email 1
+\newcommand{\emailb}{pawan.20223171@mnnit.ac.in} %Email 2
+
+
+
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+%----------HEADING-----------------
+
+
+\parbox{2cm}{%
+\includegraphics[width=2cm,clip]{MNNIT logo.jpg}
+}
+\parbox{\dimexpr\linewidth-2.8cm\relax}{
+\begin{tabularx}{\linewidth}{L r} \\
+  \textbf{\Large \name} & {\raisebox{0.0\height}{\footnotesize \faPhone}\ +91-\phone}\\
+  {Roll No.: \roll} & \href{mailto:\emaila}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emaila}} \\
+  \course &  \href{mailto:\emailb}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emailb}}\\
+  {Computer Science And Engineering} &  \href{https://github.com/Pawanguptapawan}{\raisebox{0.0\height}{\footnotesize \faGithub}\ {GitHub Profil}} \\
+  {Motilal Nehru National Institute of Technology Allahabad, Prayagraj} & \href{https://www.linkedin.com/in/pawan-gupta-pawan-b03058263/}{\raisebox{0.0\height}{\footnotesize \faLinkedin}\ {LinkedIn Profile}}
+\end{tabularx}
+}
+% \parbox{3.0cm}{%
+% \flushright \includegraphics[width=2cm,clip]{nitp_logo.png}
+% }
+
+\vspace{-5mm}
+
+
+%-----------EDUCATION-----------
+\section{\textbf{Education}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Motilal Nehru National Institute Of Technology Allahabad , Prayagraj}{CGPA: 7.94}
+      {Pursuing Honors in Computer Science and Engineering}{Graduation Year: 2026}
+      \vspace{-0.5mm}
+    \resumeSubheading
+      {Swami Teonram Alok Public School, Kota}{Percentage: 96.7}
+      {Rajasthan Board of Secondary Education, Rajasthan(12th)}{2021}
+       \vspace{-0.5mm}
+    \resumeSubheading
+    {Swami Vivekanand Children Public School , Jhalawar}{Percentage:93.33 }
+      {Rajasthan Board of Secondary Education, Rajasthan(10th)}{2019}
+      
+  \resumeSubHeadingListEnd
+\vspace{-5.8mm}
+%
+
+
+
+% %-----------EXPERIENCE-----------------
+% \section{\textbf{Experience}}
+%   \resumeSubHeadingListStart
+%     \resumeSubheading
+%       {Company Name}{City}
+%       {Your Role}{Event dates}
+%       \vspace{-2.0mm}
+%       \resumeItemListStart
+%     \item {Work description line 1}
+%     \item {Work description line 2}
+%     \resumeItemListEnd
+    
+%     \vspace{-3.0mm}
+    
+%     \resumeSubheading
+%       {Company Name}{City}
+%       {Your Role}{Event dates}
+%       \vspace{-2.0mm}
+%       \resumeItemListStart
+%     \item {Work description line 1}
+%     \item {Work description line 2}
+%     \resumeItemListEnd
+      
+%   \resumeSubHeadingListEnd
+% \vspace{-8.5mm}
+
+
+
+%-----------PROJECTS-----------------
+\section{\textbf{Personal Projects}}
+\resumeSubHeadingListStart
+
+%     \resumeProject
+%       {CryptoChat} %Project Name
+%       {Dr. Vishal} %Project Name, Location Name
+%       {} %Event Dates
+      
+%        {Develop web application based on block-chain cryptocurrency network with honset miners,}
+%        \vspace{1.6mm}
+%       {Simulate message latency, Proof of work , transaction generation and verification and block -chain forks.}
+%       {Incorporate node hyperparameters in the network evaluating the results of selfish and stubborn mining attacks.}
+%       {}
+      
+
+%       \resumeItemListStart
+%         \item {Tools \& technologies used: VS code, github , block-chain cryptocurrency , Reactjs , Taliwind CSS.}
+%         \item {1. MetaMask Authentication
+% 2. Create an Account In the Decentralized chat app
+% 3. Add friends to chat 
+% 4. Send and receive messages on the blockchain chat app
+% 5. Solidity smart contract for blockchain chat app
+% 6. Ui/Ux design our decentralized chat application
+% 7. Using web3model and web3 js and etherjs for connecting with the Ethereum blockchain.}
+%     \resumeItemListEnd
+\resumeProject
+  {CryptoChat} % Project Name
+  {} % Location Name
+  {} % Event Dates
+ {Developed a decentralized web application based on blockchain cryptocurrency networks with honest miners,\vspace{2mm} simulating message latency, proof of work, transaction generation and verification, and blockchain forks. Incorporated node hyperparameters to evaluate the results of selfish and stubborn mining attacks.}
+{}
+\vspace{-3mm}
+  \resumeItemListStart
+    \item {Technologies & Tools: VS Code, GitHub, Blockchain (Cryptocurrency Network), React.js, Tailwind CSS, Web3.js, Ethers.js, Solidity, MetaMask.}
+    \item {Key Features:}
+    \begin{itemize}
+      \item {MetaMask integration for authentication and wallet management.}
+      \item {User account creation in a decentralized chat application.}
+      \item {Add friends, send, and receive messages on a blockchain-based chat platform.}
+      \item {Implemented Solidity smart contracts to manage messages and transactions on the blockchain.}
+      \item {Designed a user-friendly UI/UX for the decentralized chat application.}
+      \item {Utilized Web3.js, Ethers.js, and Web3Model for Ethereum blockchain connectivity and interactions.}
+    \end{itemize}
+  \resumeItemListEnd
+
+    \vspace{-2mm}
+    
+%     \resumeProject
+%       {YoomXApp} %Project Name
+%       {} %Project Name, Location Name
+%       {} %Event Dates
+      
+%     {Develop web application based on Nextjs. Simulate Online meetings and Video calls , verification , security.}
+%     {}
+%       \resumeItemListStart
+%         \item {Tools \& technologies used: Nextjs (version 14), Clerk for authentication , Tailwind CSS , Github , Vercel for deployment , Stream for video and audio experiences.}
+%         \item {A React.js-based clone of Zoom, designed to enable users to authenticate via Google, GitHub, LinkedIn, or Gmail. Users can create, join, and schedule meetings, as well as access recordings of previous sessions.}
+        
+%         {Features:
+% Authentication through Google, GitHub, LinkedIn, or Gmail.
+% Real-time meeting creation, joining, and scheduling functionalities.
+% Access to past meeting recordings.}
+%     \resumeItemListEnd
+% \resumeProject
+%   {YoomXApp} % Project Name
+%   {} % Location (can be left empty if not applicable)
+%   {} % Event Dates
+%   {Developed a web application using Next.js (v14), simulating online meetings and video calls with}
+% \vspace{3mm}
+% {features like authentication, verification, and security.}
+% \vspace{-3.5mm}
+%   \resumeItemListStart
+%     \item {Technologies & Tools: Next.js (v14), Clerk for authentication, Tailwind CSS, GitHub for version control, Vercel for deployment, Stream for video/audio communication.}
+%     \item {Built a React.js-based Zoom clone that integrates with Google, GitHub, LinkedIn, and Gmail for authentication, enabling users to create, join, and schedule meetings, as well as access and view past meeting recordings.}
+%     \item {Implemented core features including:}
+%     \begin{itemize}
+%       \item {OAuth-based authentication through Google, GitHub, LinkedIn, or Gmail for user verification.}
+%       \item {Real-time meeting creation, instant joining, and scheduling with unique meeting links and invite management.}
+%       \item {Support for video/audio conferencing with Stream integration for seamless communication.}
+%       \item {Recording feature to enable users to view and download past meetings.}
+%       % \href{https://yoom-app-wsyw-5ut1sjoyf-pawanguptapawans-projects.vercel.app/}{\raisebox{0.0\height}{\footnotesize \}\ {App Link}}
+%     \end{itemize}
+%   \resumeItemListEnd
+\resumeProject
+  {YoomXApp} % Project Name
+  {} % Location (can be left empty if not applicable)
+  {} % Event Dates
+  {Developed a web application using Next.js (v14) to simulate online meetings and video calls with features like authentication, verification, and security.}
+  \vspace{3mm}
+  {Key features include:}
+  \vspace{-3.5mm}
+  \resumeItemListStart
+    \item {Technologies & Tools: Next.js (v14), Clerk for authentication, Tailwind CSS, GitHub for version control, Vercel for deployment, Stream for video/audio communication.}
+    \item {Built a React.js-based Zoom clone that integrates with Google, GitHub, LinkedIn, and Gmail for authentication, enabling users to create, join, and schedule meetings, as well as access and view past meeting recordings.}
+    \item {Implemented core features including:}
+    \begin{itemize}
+      \item {OAuth-based authentication via Google, GitHub, LinkedIn, or Gmail for user verification.}
+      \item {Real-time meeting creation, instant joining, and scheduling with unique meeting links and invite management.}
+      \item {Support for video/audio conferencing with Stream integration for seamless communication.}
+      \item {Recording feature that allows users to view and download past meetings.}
+      \item {Deployed and accessible online: \href{https://yoom-app-wsyw-5ut1sjoyf-pawanguptapawans-projects.vercel.app/}{\textbf{YoomXApp Link}}.}
+    \end{itemize}
+  \resumeItemListEnd
+
+    \vspace{-1.5mm}
+    
+      
+  \resumeSubHeadingListEnd
+\vspace{-6mm}
+
+
+
+%-----------Technical skills-----------------
+\section{\textbf{Technical Skills and Interests}}
+ \begin{itemize}[leftmargin=0.05in, label={}]
+    \small{\item{
+     \vspace{0.6mm}
+     \textbf{Languages}{: C , C++, Java, Python, JavaScript} \\
+      \vspace{0.6mm}
+     \textbf{Developer Tools}{: Visual Studio Code, Git , Github , Sublime Text , Anaconda3  } \\
+     \vspace{0.6mm}
+     \textbf{Cloud/Databases}{: SQL , NoSQL } \\
+      \vspace{0.6mm}
+     \textbf{Soft Skills}{: Adaptability , Verbal Communication , Listening , Leadership} \\
+      \vspace{0.6mm}
+     \textbf{Development}{: HTML5 , CSS ,Bootstrap , TypeScript , Expressjs , mongoDB , Matplotlib , pandas , numpy ,seaborn } \\
+      \vspace{0.6mm}
+     \textbf{Areas of Interest}{: Data Science , Artificial Intelligence, Machine Learning } \\
+    }}
+ \end{itemize}
+ \vspace{-16pt}
+
+
+
+%-----------Positions of Responsibility-----------------
+\section{\textbf{Positions of Responsibility}}
+\vspace{-0.6mm}
+\resumeSubHeadingListStart
+\resumePOR{Responsible for curating and distributing technical resources and materials to junior members. } % Position
+    {} %Club,Event
+    {} %Tenure Period
+    \vspace{-1mm}
+\resumePOR{Managing and scheduling development-focused training sessions and workshops.} % Position
+    {(Computer Science Club)} %Club,Event
+    {} %Tenure Period
+    \vspace{-1mm}
+\resumePOR{ Accountable for overseeing and maintaining the provision of technical infrastructure and facilities to } % Position
+{}
+{}
+
+{ \textbf{ Support the club’s activities}.}
+ % Position
+    {(Green Club)} %Club,Event
+      {}
+\resumeSubHeadingListEnd
+\vspace{-5mm}
+
+
+
+
+%-----------Achievements-----------------
+\section{\textbf{Achievements}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+\resumePOR{Achieved 99.53 percentile in JEE Main with All India Rank (AIR) 4278.}
+{}
+{}% Award
+\vspace{-1mm}
+\resumePOR{Secured All India Rank (AIR) 1511 (CRL) in JEE Advanced.} 
+{}
+{}
+% Award
+\vspace{-1mm}
+\resumePOR{Ranked in the top 7.09\% on Leetcode, with highest ranks of 928 and current rating is 1814.}
+{}
+{}% 
+\vspace{-1mm}
+\resumePOR{Selected for the interview round at Accenture And Placewit for technical roles.} 
+{}
+{}% Award
+\vspace{-1mm}
+\resumePOR{Successfully solved more than 500 algorithmic problems on Leetcode and Codeforces.} % Award
+{}
+{}
+
+\resumeSubHeadingListEnd
+\vspace{-5mm}
+
+
+
+
+%-------------------------------------------
+\end{document}
